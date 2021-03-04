@@ -16,6 +16,6 @@ window.addEventListener('resize', function() {
 })
 
 
-new Vue({
+export default new Vue({
   render: h => h(App),
 }).$mount('#app')

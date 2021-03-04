@@ -1,4 +1,5 @@
 import axios from 'axios';
+import vm from '../main'
 
 const PRODUCT_URL = 'https://xxxx.com'
 const MOCK_URL = 'http://xxxx.com'
