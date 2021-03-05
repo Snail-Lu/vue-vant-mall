@@ -28,7 +28,7 @@ module.exports = {
         postcss: {
           plugins: [
             require('postcss-px2rem')({
-              remUnit: 100,
+              remUnit: 37.5,
             }),
           ],
         },

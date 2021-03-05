@@ -1,5 +1,5 @@
 import axios from 'axios';
-import vm from '../main'
+// import vm from '../main'
 
 const PRODUCT_URL = 'https://xxxx.com'
 const MOCK_URL = 'http://xxxx.com'
@@ -14,20 +14,20 @@ http.interceptors.request.use(
     config.headers['token'] = token
     config.headers['Content-Type'] = 'application/json;charset=UTF-8'
     // 请求显示loading效果
-    if (config.loading === true) {
-      vm.$loading.show()
-    }
+    // if (config.loading === true) {
+    //   vm.$loading.show()
+    // }
     return config
   },
   (error) => {
-    vm.$loading.hide()
+    // vm.$loading.hide()
     return Promise.reject(error)
   }
 )
 // 响应拦截器
 http.interceptors.response.use(
   (res) => {
-    vm.$loading.hide()
+    // vm.$loading.hide()
     // token失效，重新登录
     if (res.data.code === 401) {
       //  重新登录
@@ -35,12 +35,12 @@ http.interceptors.response.use(
     return res
   },
   (error) => {
-    vm.$loading.hide()
+    // vm.$loading.hide()
     return Promise.reject(error)
   }
 )
 
-function get(url, data, lodaing) {
+function get(url) {
   return new Promise((resolve, reject) => {
     http
       .get(url)
