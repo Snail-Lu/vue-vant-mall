@@ -1,20 +1,26 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <Layout>
+    <div class="category">
+      <van-button type="primary">分类</van-button>
+    </div>
+  </Layout>
 </template>
 
 <script>
+import { Button } from 'vant';
+import Layout from '../components/Layout';
 
 export default {
-  name: 'App',
+  name: 'Category',
   components: {
+    [Button.name]: Button,
+    Layout
   }
 }
 </script>
 
 <style>
-#app {
+.category {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

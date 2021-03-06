@@ -1,20 +1,26 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <Layout>
+    <div class="cart">
+      <van-button type="primary">购物车</van-button>
+    </div>
+  </Layout>
 </template>
 
 <script>
+import { Button } from 'vant';
+import Layout from '../components/Layout';
 
 export default {
-  name: 'App',
+  name: 'Cart',
   components: {
+    [Button.name]: Button,
+    Layout
   }
 }
 </script>
 
 <style>
-#app {
+.cart {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
