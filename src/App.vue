@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <van-button type="primary">Hello World!</van-button>
+    <van-button type="primary">主要按钮</van-button>
   </div>
 </template>
 
