@@ -23,6 +23,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-color: #f5f5f5;
-  min-height: 100%;
+  height: 100%;
 }
 </style>
