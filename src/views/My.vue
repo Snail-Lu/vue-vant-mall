@@ -29,6 +29,8 @@
         <van-grid-item icon="photo-o" text="收藏夹" />
         <van-grid-item icon="photo-o" text="个人资料" />
       </van-grid>
+
+      <div class="test-font">测试字体</div>
     </div>
   </Layout>
 </template>
