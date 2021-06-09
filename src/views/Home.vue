@@ -99,8 +99,7 @@ export default {
 .my-swipe .van-swipe-item {
   color: #fff;
   font-size: 20px;
-  height: 300px;
-  line-height: 300px;
+  line-height: 150px;
   text-align: center;
   background-color: #39a9ed;
 }
