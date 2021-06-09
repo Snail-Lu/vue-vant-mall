@@ -24,15 +24,7 @@ module.exports = {
       extract: true,
       sourceMap: true,
       // css预设器配置项
-      loaderOptions: {
-        postcss: {
-          plugins: [
-            require('postcss-px2rem')({
-              remUnit: 37.5,
-            }),
-          ],
-        },
-      },
+      loaderOptions: {},
       // 启用 CSS modules for all css / pre-processor files.
       requireModuleExtension: true,
     },
