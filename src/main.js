@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { get, post } from './utils/http'
+import { Get, Post } from './utils/request'
 import router from './router'
 
 Vue.config.productionTip = false
-Vue.prototype.$http = { get, post }
+Vue.prototype.$http = { Get, Post }
 
 export default new Vue({
 	router,
