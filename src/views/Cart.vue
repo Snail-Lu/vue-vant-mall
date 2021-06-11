@@ -65,10 +65,10 @@ export default {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #2c3e50;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 
 	.my-submit-bar {
-		bottom: 50px;
+		bottom: 100px;
 	}
 }
 </style>
