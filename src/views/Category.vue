@@ -7,14 +7,11 @@
 </template>
 
 <script>
-import { Button, TreeSelect } from 'vant'
 import Layout from '../components/Layout'
 
 export default {
 	name: 'Category',
 	components: {
-		[Button.name]: Button,
-		[TreeSelect.name]: TreeSelect,
 		Layout
 	},
 	data: function () {

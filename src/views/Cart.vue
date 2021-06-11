@@ -25,18 +25,11 @@
 </template>
 
 <script>
-import { Button, SubmitBar, Checkbox, Card, Tag, List } from 'vant'
 import Layout from '../components/Layout'
 
 export default {
 	name: 'Cart',
 	components: {
-		[Button.name]: Button,
-		[SubmitBar.name]: SubmitBar,
-		[Checkbox.name]: Checkbox,
-		[Card.name]: Card,
-		[Tag.name]: Tag,
-		[List.name]: List,
 		Layout
 	},
 	data: function () {

@@ -34,19 +34,11 @@
 </template>
 
 <script>
-import { Button, Search, Swipe, SwipeItem, Card, Tag, List } from 'vant'
 import Layout from '../components/Layout'
 
 export default {
 	name: 'Home',
 	components: {
-		[Button.name]: Button,
-		[Search.name]: Search,
-		[Swipe.name]: Swipe,
-		[SwipeItem.name]: SwipeItem,
-		[Card.name]: Card,
-		[Tag.name]: Tag,
-		[List.name]: List,
 		Layout
 	},
 	data: function () {

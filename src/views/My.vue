@@ -29,19 +29,11 @@
 </template>
 
 <script>
-import { Button, Row, Col, Grid, GridItem, Cell, Image } from 'vant'
 import Layout from '../components/Layout'
 
 export default {
 	name: 'My',
 	components: {
-		[Button.name]: Button,
-		[Row.name]: Row,
-		[Col.name]: Col,
-		[Grid.name]: Grid,
-		[GridItem.name]: GridItem,
-		[Cell.name]: Cell,
-		[Image.name]: Image,
 		Layout
 	}
 }
