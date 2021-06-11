@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Layout from '../components/Layout'
+import Layout from '../components/Layout/index.vue'
 
 export default {
 	name: 'Category',
