@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<div class="home">
-			<van-search v-model="searchKey" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" />
+			<van-search v-model="searchKey" shape="round" background="#f5f5f5" placeholder="请输入搜索关键词" />
 			<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
 				<van-swipe-item>1</van-swipe-item>
 				<van-swipe-item>2</van-swipe-item>
@@ -78,6 +78,14 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	color: #2c3e50;
 }
+
+.van-search {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
 .my-swipe .van-swipe-item {
 	color: #fff;
 	font-size: 20px;
