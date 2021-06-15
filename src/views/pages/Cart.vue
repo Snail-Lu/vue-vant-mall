@@ -1,13 +1,6 @@
 <template>
 	<Layout>
-		<div class="home">
-			<van-search v-model="searchKey" shape="round" background="#f5f5f5" placeholder="请输入搜索关键词" />
-			<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-				<van-swipe-item>1</van-swipe-item>
-				<van-swipe-item>2</van-swipe-item>
-				<van-swipe-item>3</van-swipe-item>
-				<van-swipe-item>4</van-swipe-item>
-			</van-swipe>
+		<div class="cart">
 			<van-list v-model="loading" :finished="finished" @load="onLoad">
 				<!-- <van-cell v-for="item in list" :key="item" :title="item" /> -->
 				<van-card
@@ -15,7 +8,6 @@
 					:key="item"
 					class="goods-item"
 					price="2.00"
-					desc="描述信息"
 					title="商品标题"
 					thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
 				>
@@ -23,27 +15,25 @@
 						<van-tag plain type="danger">标签</van-tag>
 						<van-tag plain type="danger">标签</van-tag>
 					</template>
-					<template #footer>
-						<van-button size="mini">按钮</van-button>
-						<van-button size="mini">按钮</van-button>
-					</template>
 				</van-card>
 			</van-list>
+			<van-submit-bar class="my-submit-bar" :price="3050" button-text="去结算" @submit="onSubmit">
+				<van-checkbox v-model="checked">全选</van-checkbox>
+			</van-submit-bar>
 		</div>
 	</Layout>
 </template>
 
 <script>
-import Layout from '../components/Layout/index.vue'
+import Layout from '@components/Layout/index.vue'
 
 export default {
-	name: 'Home',
+	name: 'Cart',
 	components: {
 		Layout
 	},
 	data: function () {
 		return {
-			searchKey: '',
 			loading: false,
 			finished: false,
 			list: []
@@ -51,8 +41,6 @@ export default {
 	},
 	methods: {
 		onLoad() {
-			// 异步更新数据
-			// setTimeout 仅做示例，真实场景中一般为 ajax 请求
 			setTimeout(() => {
 				for (let i = 0; i < 10; i++) {
 					this.list.push(this.list.length + 1)
@@ -72,30 +60,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
+.cart {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #2c3e50;
-}
+	margin-bottom: 100px;
 
-.van-search {
-	position: sticky;
-	top: 0;
-	left: 0;
-	z-index: 999;
-}
-
-.my-swipe .van-swipe-item {
-	color: #fff;
-	font-size: 20px;
-	height: 300px;
-	line-height: 300px;
-	text-align: center;
-	background-color: #39a9ed;
-}
-
-.goods-item {
-	background-color: #fff;
+	.my-submit-bar {
+		bottom: 100px;
+	}
 }
 </style>

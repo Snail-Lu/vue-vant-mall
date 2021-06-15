@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Layout from '../components/Layout/index.vue'
+import Layout from '@components/Layout/index.vue'
 
 export default {
 	name: 'My',
