@@ -6,4 +6,5 @@ module.exports = {
 	tabWidth: 2, // 一个tab代表几个空格数
 	useTabs: true, // 启用tab缩进
 	bracketSpacing: true, // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
+	endOfLine: 'lf'
 }
