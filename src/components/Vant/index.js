@@ -15,7 +15,10 @@ import {
 	SubmitBar,
 	Checkbox,
 	Cell,
-	Lazyload
+	Lazyload,
+	NavBar,
+	Icon,
+	Dialog
 } from 'vant'
 
 let vantUIs = [
@@ -35,7 +38,10 @@ let vantUIs = [
 	SubmitBar,
 	Checkbox,
 	Cell,
-	Lazyload
+	Lazyload,
+	NavBar,
+	Icon,
+	Dialog
 ]
 
 export default {

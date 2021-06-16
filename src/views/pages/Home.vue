@@ -1,7 +1,14 @@
 <template>
 	<Layout>
 		<div class="home">
-			<van-search v-model="searchKey" shape="round" background="#f5f5f5" placeholder="请输入搜索关键词" />
+			<van-search
+				v-model="searchKey"
+				shape="round"
+				background="#f5f5f5"
+				placeholder="请输入搜索关键词"
+				disabled
+				@click="clickToSearch"
+			/>
 			<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
 				<van-swipe-item v-for="(image, index) in swiperImages" :key="index">
 					<img v-lazy="image" class="swiper-img" />
@@ -54,6 +61,7 @@ export default {
 		}
 	},
 	methods: {
+		// list初始化
 		onLoad() {
 			// 异步更新数据
 			// setTimeout 仅做示例，真实场景中一般为 ajax 请求
@@ -70,6 +78,10 @@ export default {
 				//   this.finished = true;
 				// }
 			}, 1000)
+		},
+
+		clickToSearch() {
+			this.$router.push({ path: 'search' })
 		}
 	}
 }

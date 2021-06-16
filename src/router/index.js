@@ -28,6 +28,12 @@ const routes = [
 		name: 'My',
 		component: () => import('@views/pages/My.vue'),
 		meta: { title: '我的', keepAlive: false }
+	},
+	{
+		path: '/search',
+		name: 'Search',
+		component: () => import('@views/pages/Search.vue'),
+		meta: { title: '搜索', keepAlive: false }
 	}
 ]
 
