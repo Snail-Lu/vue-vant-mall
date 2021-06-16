@@ -3,13 +3,11 @@
 		<div class="home">
 			<van-search v-model="searchKey" shape="round" background="#f5f5f5" placeholder="请输入搜索关键词" />
 			<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-				<van-swipe-item>1</van-swipe-item>
-				<van-swipe-item>2</van-swipe-item>
-				<van-swipe-item>3</van-swipe-item>
-				<van-swipe-item>4</van-swipe-item>
+				<van-swipe-item v-for="(image, index) in swiperImages" :key="index">
+					<img v-lazy="image" class="swiper-img" />
+				</van-swipe-item>
 			</van-swipe>
 			<van-list v-model="loading" :finished="finished" @load="onLoad">
-				<!-- <van-cell v-for="item in list" :key="item" :title="item" /> -->
 				<van-card
 					v-for="item in list"
 					:key="item"
@@ -44,6 +42,12 @@ export default {
 	data: function () {
 		return {
 			searchKey: '',
+			swiperImages: [
+				'https://img01.yzcdn.cn/vant/apple-1.jpg',
+				'https://img01.yzcdn.cn/vant/apple-2.jpg',
+				'https://img01.yzcdn.cn/vant/apple-3.jpg',
+				'https://img01.yzcdn.cn/vant/apple-4.jpg'
+			],
 			loading: false,
 			finished: false,
 			list: []
@@ -86,13 +90,18 @@ export default {
 	z-index: 999;
 }
 
-.my-swipe .van-swipe-item {
-	color: #fff;
-	font-size: 20px;
-	height: 300px;
-	line-height: 300px;
-	text-align: center;
-	background-color: #39a9ed;
+.my-swipe {
+	.van-swipe-item {
+		color: #fff;
+		font-size: 20px;
+		height: 300px;
+		width: 100%;
+
+		.swiper-img {
+			width: 100%;
+			height: 300px;
+		}
+	}
 }
 
 .goods-item {

@@ -14,7 +14,8 @@ import {
 	TreeSelect,
 	SubmitBar,
 	Checkbox,
-	Cell
+	Cell,
+	Lazyload
 } from 'vant'
 
 let vantUIs = [
@@ -33,7 +34,8 @@ let vantUIs = [
 	TreeSelect,
 	SubmitBar,
 	Checkbox,
-	Cell
+	Cell,
+	Lazyload
 ]
 
 export default {
