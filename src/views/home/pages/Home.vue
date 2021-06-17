@@ -28,10 +28,6 @@
 						<van-tag plain type="danger">标签</van-tag>
 						<van-tag plain type="danger">标签</van-tag>
 					</template>
-					<template #footer>
-						<van-button size="mini">按钮</van-button>
-						<van-button size="mini">按钮</van-button>
-					</template>
 				</van-card>
 			</van-list>
 		</div>

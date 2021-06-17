@@ -8,31 +8,31 @@ const routes = [
 	{
 		path: '/',
 		name: 'Home',
-		component: () => import('@views/pages/Home.vue'),
+		component: () => import('@views/home/pages/Home.vue'),
 		meta: { title: '首页', keepAlive: false }
 	},
 	{
 		path: '/category',
 		name: 'Category',
-		component: () => import('@views/pages/Category.vue'),
+		component: () => import('@views/category/pages/Category.vue'),
 		meta: { title: '分类', keepAlive: false }
 	},
 	{
 		path: '/cart',
 		name: 'Cart',
-		component: () => import('@views/pages/Cart.vue'),
+		component: () => import('@views/cart/pages/Cart.vue'),
 		meta: { title: '购物车', keepAlive: false }
 	},
 	{
 		path: '/my',
 		name: 'My',
-		component: () => import('@views/pages/My.vue'),
+		component: () => import('@views/member/pages/My.vue'),
 		meta: { title: '我的', keepAlive: false }
 	},
 	{
 		path: '/search',
 		name: 'Search',
-		component: () => import('@views/pages/Search.vue'),
+		component: () => import('@views/goods/pages/Search.vue'),
 		meta: { title: '搜索', keepAlive: false }
 	}
 ]
