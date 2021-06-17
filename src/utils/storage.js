@@ -36,7 +36,7 @@ const local = {
 			const date = new Date().getTime()
 			// 如果大于就是过期了，如果小于或等于就还没过期
 			if (date - item.startTime > item.expires) {
-				localStorage.removeItem(name)
+				localStorage.removeItem(key)
 				return false
 			} else {
 				return item.value

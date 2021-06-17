@@ -22,7 +22,7 @@
 		<div class="search-history">
 			<div class="search-history-header flex-box flex-h-between flex-v-center">
 				<span>热门搜索</span>
-				<van-icon name="replay" />
+				<!-- <van-icon name="replay" /> -->
 			</div>
 			<div class="search-history-content">
 				<div class="search-history-item" v-for="(item, index) in hotSearchList" :key="index">{{ item }}</div>
@@ -32,13 +32,31 @@
 </template>
 
 <script>
+import { local } from '@utils/storage.js'
 export default {
 	name: 'Search',
 	data() {
 		return {
 			searchKey: '',
 			searchHistoryList: [], // 搜索历史
-			hotSearchList: ['iPhone 12', '618盛典', '小米11'] // 热门搜索
+			// 热门搜索
+			hotSearchList: [
+				'iPhone 12',
+				'618盛典',
+				'小米11',
+				'跨店满减',
+				'智能空调',
+				'小家电',
+				'夏日补水',
+				'夏日T恤',
+				'遮阳伞'
+			]
+		}
+	},
+	created() {
+		let res = local.get('searchHistory')
+		if (res) {
+			this.searchHistoryList = res
 		}
 	},
 	methods: {
@@ -52,6 +70,7 @@ export default {
 			const { searchKey } = this
 			if (!this.searchHistoryList.includes(searchKey) && searchKey.trim()) {
 				this.searchHistoryList.push(searchKey)
+				local.set('searchHistory', this.searchHistoryList)
 			}
 		},
 
@@ -64,6 +83,7 @@ export default {
 				})
 				.then(() => {
 					this.searchHistoryList = []
+					local.remove('searchHistory')
 				})
 		}
 	}
