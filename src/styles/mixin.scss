@@ -1,0 +1,17 @@
+/* 单行超出省略 */
+@mixin singleline-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 多行超出省略 */
+@mixin multiline-overflow($line) {
+	white-space: normal;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+}

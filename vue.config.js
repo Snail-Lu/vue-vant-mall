@@ -44,5 +44,16 @@ module.exports = {
 			.set('@views', resolve('./src/views'))
 			.set('@assets', resolve('./src/assets'))
 			.set('@utils', resolve('./src/utils'))
+	},
+	pluginOptions: {
+		// 使用第三方插件进行全局样式文件引入
+		'style-resources-loader': {
+			preProcessor: 'scss',
+			patterns: [
+				path.resolve(__dirname, './src/styles/index.scss'),
+				path.resolve(__dirname, './src/styles/variables.scss'),
+				path.resolve(__dirname, './src/styles/mixin.scss')
+			]
+		}
 	}
 }
