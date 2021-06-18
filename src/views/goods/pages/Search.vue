@@ -2,10 +2,16 @@
 	<div class="search-container">
 		<van-nav-bar left-arrow @click-left="clickToBack">
 			<template #title>
-				<van-search v-model="searchKey" shape="round" background="#f5f5f5" placeholder="请输入搜索关键词" />
+				<van-search
+					v-model="searchKey"
+					shape="round"
+					background="#f5f5f5"
+					placeholder="请输入搜索关键词"
+					@search="onSearch"
+				/>
 			</template>
 			<template #right>
-				<div @click="onSearch">搜索</div>
+				<div @click="onSearch()">搜索</div>
 			</template>
 		</van-nav-bar>
 		<!-- 搜索历史 -->
@@ -15,7 +21,14 @@
 				<van-icon name="delete-o" @click="clearSearchHistory"></van-icon>
 			</div>
 			<div class="search-history-content">
-				<div class="search-history-item" v-for="(item, index) in searchHistoryList" :key="index">{{ item }}</div>
+				<div
+					class="search-history-item"
+					v-for="(item, index) in searchHistoryList"
+					:key="index"
+					@click="onSearch(item)"
+				>
+					{{ item }}
+				</div>
 			</div>
 		</div>
 		<!-- 热门搜索 -->
@@ -25,7 +38,9 @@
 				<!-- <van-icon name="replay" /> -->
 			</div>
 			<div class="search-history-content">
-				<div class="search-history-item" v-for="(item, index) in hotSearchList" :key="index">{{ item }}</div>
+				<div class="search-history-item" v-for="(item, index) in hotSearchList" :key="index" @click="onSearch(item)">
+					{{ item }}
+				</div>
 			</div>
 		</div>
 	</div>
@@ -66,11 +81,16 @@ export default {
 		},
 
 		// 搜索
-		onSearch() {
-			const { searchKey } = this
-			if (!this.searchHistoryList.includes(searchKey) && searchKey.trim()) {
-				this.searchHistoryList.push(searchKey)
-				local.set('searchHistory', this.searchHistoryList)
+		onSearch(key) {
+			if (key) {
+				this.$router.push({ path: 'goodsList', query: { key } })
+			} else {
+				const { searchKey } = this
+				if (!this.searchHistoryList.includes(searchKey) && searchKey.trim()) {
+					this.searchHistoryList.unshift(searchKey)
+					local.set('searchHistory', this.searchHistoryList)
+				}
+				this.$router.push({ path: 'goodsList', query: { key: searchKey } })
 			}
 		},
 
