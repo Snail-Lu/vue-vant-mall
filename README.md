@@ -8,6 +8,7 @@
 - 全局状态管理 ---- vuex
 - 代码格式化 ---- prettier
 - 图标 ---- iconfont
+- 长列表滚动 ---- vue-infinite-scroll
 
 ## Project setup
 
