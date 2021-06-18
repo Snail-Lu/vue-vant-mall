@@ -2,6 +2,10 @@ const path = require('path') //引入path模块
 function resolve(dir) {
 	return path.join(__dirname, dir) //path.join(__dirname)设置绝对路径
 }
+
+// 判断是否是生产环境
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
 	publicPath: './', // 默认为'/'
 
@@ -25,7 +29,7 @@ module.exports = {
 	// 配置css
 	css: {
 		// 是否使用css分离插件 ExtractTextPlugin
-		extract: true,
+		extract: isProd,
 		sourceMap: true,
 		// css预设器配置项
 		loaderOptions: {},
