@@ -34,6 +34,12 @@ const routes = [
 		name: 'Search',
 		component: () => import('@views/goods/pages/Search.vue'),
 		meta: { title: '搜索', keepAlive: false }
+	},
+	{
+		path: '/goodsList',
+		name: 'GoodsList',
+		component: () => import('@views/goods/pages/List.vue'),
+		meta: { title: '商品列表', keepAlive: false }
 	}
 ]
 
