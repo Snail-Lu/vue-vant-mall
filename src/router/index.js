@@ -40,6 +40,12 @@ const routes = [
 		name: 'GoodsList',
 		component: () => import('@views/goods/pages/List.vue'),
 		meta: { title: '商品列表', keepAlive: false }
+	},
+	{
+		path: '/goodsDetail',
+		name: 'GoodsDetail',
+		component: () => import('@views/goods/pages/Detail.vue'),
+		meta: { title: '商品详情', keepAlive: false }
 	}
 ]
 

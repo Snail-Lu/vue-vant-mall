@@ -26,7 +26,7 @@
 			infinite-scroll-distance="10"
 			infinite-scroll-disabled="loadBusy"
 		>
-			<div class="goods-item flex-box" v-for="(goodsItem, goodsIndex) in goodsList" :key="goodsIndex">
+			<div class="goods-item flex-box" v-for="(goodsItem, goodsIndex) in goodsList" :key="goodsIndex" @click="toDetail">
 				<img class="goods-item-img" src="#" alt="" />
 				<div class="goods-item-info">
 					<div class="goods-name">
@@ -54,6 +54,9 @@ export default {
 		// 返回上一页
 		clickToBack() {
 			this.$router.back()
+		},
+		toDetail() {
+			this.$router.push({ path: 'goodsDetail' })
 		}
 	}
 }
