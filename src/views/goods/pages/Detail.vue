@@ -1,14 +1,10 @@
 <template>
 	<div class="goods-detail-container">
 		<van-nav-bar left-arrow @click-left="clickToBack" title="商品详情"></van-nav-bar>
-		<van-swipe @change="onChange">
-			<van-swipe-item>1</van-swipe-item>
-			<van-swipe-item>2</van-swipe-item>
-			<van-swipe-item>3</van-swipe-item>
-			<van-swipe-item>4</van-swipe-item>
-			<template #indicator>
-				<div class="custom-indicator">{{ current + 1 }}/4</div>
-			</template>
+		<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+			<van-swipe-item v-for="(image, index) in swiperImages" :key="index">
+				<img v-lazy="image" class="swiper-img" />
+			</van-swipe-item>
 		</van-swipe>
 	</div>
 </template>
@@ -17,7 +13,12 @@
 export default {
 	data() {
 		return {
-			goodsList: [{ name: 'test' }]
+			swiperImages: [
+				'https://img01.yzcdn.cn/vant/apple-1.jpg',
+				'https://img01.yzcdn.cn/vant/apple-2.jpg',
+				'https://img01.yzcdn.cn/vant/apple-3.jpg',
+				'https://img01.yzcdn.cn/vant/apple-4.jpg'
+			]
 		}
 	},
 	methods: {
@@ -37,5 +38,19 @@ export default {
 .van-search {
 	width: 100%;
 	height: 60px;
+}
+
+.my-swipe {
+	.van-swipe-item {
+		color: #fff;
+		font-size: 20px;
+		height: 400px;
+		width: 300%;
+
+		.swiper-img {
+			width: 100%;
+			height: 400px;
+		}
+	}
 }
 </style>
