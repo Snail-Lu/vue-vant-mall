@@ -18,7 +18,14 @@ import {
 	Lazyload,
 	NavBar,
 	Icon,
-	Dialog
+	Dialog,
+	GoodsAction,
+	GoodsActionIcon,
+	GoodsActionButton,
+	Tab,
+	Tabs,
+	Sku,
+	Toast
 } from 'vant'
 
 let vantUIs = [
@@ -41,7 +48,14 @@ let vantUIs = [
 	Lazyload,
 	NavBar,
 	Icon,
-	Dialog
+	Dialog,
+	GoodsAction,
+	GoodsActionIcon,
+	GoodsActionButton,
+	Tab,
+	Tabs,
+	Sku,
+	Toast
 ]
 
 export default {
