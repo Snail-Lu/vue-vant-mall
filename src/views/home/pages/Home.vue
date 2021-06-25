@@ -11,7 +11,7 @@
 			/>
 			<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
 				<van-swipe-item v-for="(image, index) in swiperImages" :key="index">
-					<img v-lazy="image" class="swiper-img" />
+					<img :src="image" class="swiper-img" />
 				</van-swipe-item>
 			</van-swipe>
 			<van-list v-model="loading" :finished="finished" @load="onLoad">
@@ -46,10 +46,10 @@ export default {
 		return {
 			searchKey: '',
 			swiperImages: [
-				'https://img01.yzcdn.cn/vant/apple-1.jpg',
-				'https://img01.yzcdn.cn/vant/apple-2.jpg',
-				'https://img01.yzcdn.cn/vant/apple-3.jpg',
-				'https://img01.yzcdn.cn/vant/apple-4.jpg'
+				'http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/184934/23/8463/80174/60c19578E771f3647/f1047680716f1ec8.jpg!cr_1053x420_4_0!q70.jpg.dpg',
+				'http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/181556/19/8326/183596/60c02e03E572b4980/10c102b27595a2e5.png!cr_1053x420_4_0!q70.jpg.dpg',
+				'http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/184934/23/8463/80174/60c19578E771f3647/f1047680716f1ec8.jpg!cr_1053x420_4_0!q70.jpg.dpg',
+				'http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/107860/25/19496/84719/60ac6ec1Eb635e231/1ed3305f87c6e022.jpg!cr_1053x420_4_0!q70.jpg.dpg'
 			],
 			loading: false,
 			finished: false,
@@ -99,15 +99,15 @@ export default {
 }
 
 .my-swipe {
-	.van-swipe-item {
-		color: #fff;
-		font-size: 20px;
-		height: 300px;
-		width: 100%;
+	margin: 0 25px;
+	border-radius: 10px;
+	overflow: hidden;
 
+	.van-swipe-item {
+		// width: 700px;
 		.swiper-img {
 			width: 100%;
-			height: 300px;
+			display: block;
 		}
 	}
 }
