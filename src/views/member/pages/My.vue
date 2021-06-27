@@ -16,7 +16,7 @@
 				<van-grid-item icon="photo-o" text="退货/退款" />
 			</van-grid>
 
-			<van-cell title="我的服务" is-link to="index" class="my-order" />
+			<van-cell title="我的服务" is-link to="test" class="my-order" />
 			<van-grid :column-num="5">
 				<van-grid-item icon="photo-o" text="优惠券" />
 				<van-grid-item icon="photo-o" text="红包" />

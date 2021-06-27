@@ -58,6 +58,12 @@ const routes = [
 		name: 'OrderList',
 		component: () => import('@views/order/pages/List.vue'),
 		meta: { title: '订单列表', keepAlive: false }
+	},
+	{
+		path: '/test',
+		name: 'Test',
+		component: () => import('@views/member/pages/Test.vue'),
+		meta: { title: '测试页', keepAlive: false }
 	}
 ]
 
