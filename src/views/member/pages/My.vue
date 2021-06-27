@@ -7,7 +7,7 @@
 				</van-col>
 				<van-col span="8">snail</van-col>
 			</van-row>
-			<van-cell title="我的订单" is-link to="index" class="my-order" />
+			<van-cell title="我的订单" is-link to="orderList" class="my-order" />
 			<van-grid :column-num="5">
 				<van-grid-item icon="photo-o" text="全部" />
 				<van-grid-item icon="photo-o" text="待付款" />

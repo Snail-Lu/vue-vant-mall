@@ -52,6 +52,12 @@ const routes = [
 		name: 'CreateOrder',
 		component: () => import('@views/order/pages/Create.vue'),
 		meta: { title: '创建订单', keepAlive: false }
+	},
+	{
+		path: '/orderList',
+		name: 'OrderList',
+		component: () => import('@views/order/pages/List.vue'),
+		meta: { title: '订单列表', keepAlive: false }
 	}
 ]
 
