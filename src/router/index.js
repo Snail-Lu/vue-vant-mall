@@ -46,6 +46,12 @@ const routes = [
 		name: 'GoodsDetail',
 		component: () => import('@views/goods/pages/Detail.vue'),
 		meta: { title: '商品详情', keepAlive: false }
+	},
+	{
+		path: '/createOrder',
+		name: 'CreateOrder',
+		component: () => import('@views/order/pages/Create.vue'),
+		meta: { title: '创建订单', keepAlive: false }
 	}
 ]
 

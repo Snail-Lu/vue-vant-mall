@@ -168,7 +168,7 @@ export default {
 		// 立即购买
 		onBuyClicked() {
 			this.showSkuPanel = false
-			Toast('购买成功')
+			this.$router.push({ path: 'createOrder' })
 		},
 		// 加入购物车
 		onAddCartClicked() {

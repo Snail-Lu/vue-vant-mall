@@ -25,7 +25,8 @@ import {
 	Tab,
 	Tabs,
 	Sku,
-	Toast
+	Toast,
+	ContactCard
 } from 'vant'
 
 let vantUIs = [
@@ -55,7 +56,8 @@ let vantUIs = [
 	Tab,
 	Tabs,
 	Sku,
-	Toast
+	Toast,
+	ContactCard
 ]
 
 export default {
