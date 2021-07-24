@@ -31,6 +31,10 @@ npm run serve
 npm run build
 ```
 
+### `Vant`组件按需引入
+
+本项目中 `Vant` 组件为按需引入，需要使用到的组件在`src/components/Vant/index.js`中引入即可。
+
 ### `VS Code` 中 `Prettier` 自动格式化配置
 
 1. 安装插件 `Prettier - Code fromatter` 并启用。
