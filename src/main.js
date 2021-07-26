@@ -4,6 +4,7 @@ import { Get, Post } from './utils/request'
 import router from './router'
 import vant from './components/Vant/index'
 import infiniteScroll from 'vue-infinite-scroll'
+import './assets/iconfont/iconfont.css'
 
 // 批量注册vant组件
 Vue.use(vant)
