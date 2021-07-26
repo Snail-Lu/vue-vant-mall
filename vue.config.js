@@ -44,6 +44,11 @@ module.exports = {
 			.set('@views', resolve('./src/views'))
 			.set('@assets', resolve('./src/assets'))
 			.set('@utils', resolve('./src/utils'))
+
+		config.plugin('html').tap((args) => {
+			args[0].title = '商城'
+			return args
+		})
 	},
 	pluginOptions: {
 		// 使用第三方插件进行全局样式文件引入
