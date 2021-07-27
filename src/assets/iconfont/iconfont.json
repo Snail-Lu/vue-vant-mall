@@ -6,6 +6,41 @@
   "description": "常用通用图标",
   "glyphs": [
     {
+      "icon_id": "4631515",
+      "name": "个人资料",
+      "font_class": "gerenziliao",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "14488502",
+      "name": "地点，定位",
+      "font_class": "location",
+      "unicode": "e782",
+      "unicode_decimal": 59266
+    },
+    {
+      "icon_id": "11776586",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "18044629",
+      "name": "会员",
+      "font_class": "diamond",
+      "unicode": "eee0",
+      "unicode_decimal": 61152
+    },
+    {
+      "icon_id": "18729632",
+      "name": "更多",
+      "font_class": "more",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
       "icon_id": "15383966",
       "name": "个人",
       "font_class": "geren",
