@@ -93,7 +93,7 @@ export default {
 		.nick-name {
 			font-size: 36px;
 			margin-left: 20px;
-			max-width: 240px;
+			max-width: 260px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -107,6 +107,7 @@ export default {
 			border-radius: 30px;
 			text-align: center;
 			padding: 0 10px;
+			margin-left: 10px;
 		}
 	}
 
