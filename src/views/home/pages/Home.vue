@@ -19,14 +19,14 @@
 					v-for="item in list"
 					:key="item"
 					class="goods-item"
-					price="2.00"
-					desc="描述信息"
-					title="商品标题"
-					thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+					price="2699.00"
+					desc="2021年新款5G手机"
+					title="Redmi K40游戏增强版 天玑1200处理器67W闪充 120Hz高刷直屏 12GB+256GB 暗影 游戏电竞智能5G手机 小米 红米"
+					thumb="https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/178206/9/15027/175199/60fa8560Ea00bcfee/f4df2ce7ecd451cf.jpg!q70.dpg.webp"
 				>
 					<template #tags>
-						<van-tag plain type="danger">标签</van-tag>
-						<van-tag plain type="danger">标签</van-tag>
+						<van-tag plain type="danger" round>满2000减100</van-tag>
+						<van-tag plain type="danger" round>赠品</van-tag>
 					</template>
 				</van-card>
 			</van-list>
