@@ -2,29 +2,42 @@
 	<div class="order-list-container">
 		<van-nav-bar left-arrow @click-left="clickToBack" title="订单列表"> </van-nav-bar>
 		<div class="goods-tabs-box flex-box flex-v-center">
-			<div class="tab-item flex-item-1">全部</div>
-			<div class="tab-item flex-item-1">待付款</div>
-			<div class="tab-item flex-item-1">待发货</div>
-			<div class="tab-item flex-item-1">待收货</div>
+			<div :class="['tab-item', 'flex-item-1', currentTabIndex === 0 ? 'tab-item-active' : '']" @click="changeTab(0)">
+				全部
+			</div>
+			<div :class="['tab-item', 'flex-item-1', currentTabIndex === 1 ? 'tab-item-active' : '']" @click="changeTab(1)">
+				待付款
+			</div>
+			<div :class="['tab-item', 'flex-item-1', currentTabIndex === 2 ? 'tab-item-active' : '']" @click="changeTab(2)">
+				待发货
+			</div>
+			<div :class="['tab-item', 'flex-item-1', currentTabIndex === 3 ? 'tab-item-active' : '']" @click="changeTab(3)">
+				待收货
+			</div>
 		</div>
 		<div
-			class="goods-list"
+			class="order-list"
 			v-infinite-scroll="loadMore"
 			infinite-scroll-distance="10"
 			infinite-scroll-disabled="loadBusy"
 		>
-			<div class="goods-item flex-box" v-for="(goodsItem, goodsIndex) in goodsList" :key="goodsIndex">
-				<img class="goods-item-img" src="#" alt="" />
-				<div class="goods-item-info">
-					<div class="goods-name">
-						先科（SAST）LCD1000B 投影仪家用办公超高清小型可连手机wifi一体家庭影院兼容1080P 标准版
-					</div>
-					<div class="goods-label">商品标签</div>
-					<div class="goods-price">
-						<span>¥</span>
-						<span>999.00</span>
-					</div>
+			<div class="order-item" v-for="(goodsItem, goodsIndex) in 4" :key="goodsIndex">
+				<div class="order-header flex-box flex-h-between">
+					<div>订单号：20210802225637</div>
+					<div class="order-status">待发货</div>
 				</div>
+				<van-card
+					v-for="item in 2"
+					:key="item"
+					class="goods-item"
+					price="2699.00"
+					desc="8G+128G，黑色"
+					num="1"
+					title="Redmi K40游戏增强版 天玑1200处理器67W闪充 120Hz高刷直屏 12GB+256GB 暗影 游戏电竞智能5G手机 小米 红米"
+					thumb="https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/178206/9/15027/175199/60fa8560Ea00bcfee/f4df2ce7ecd451cf.jpg!q70.dpg.webp"
+				>
+				</van-card>
+				<div class="order-footer">合计：¥5398.00</div>
 			</div>
 		</div>
 	</div>
@@ -34,13 +47,18 @@
 export default {
 	data() {
 		return {
-			goodsList: [{ name: 'test' }]
+			goodsList: [{ name: 'test' }],
+			currentTabIndex: 0
 		}
 	},
 	methods: {
 		// 返回上一页
 		clickToBack() {
 			this.$router.back()
+		},
+		// 切换tab
+		changeTab(index) {
+			this.currentTabIndex = index
 		},
 		// 触底了
 		loadMore() {
@@ -63,39 +81,44 @@ export default {
 .goods-tabs-box {
 	.tab-item {
 		text-align: center;
-		padding: 14px 0;
+		padding: 20px 0;
 		font-size: 28px;
 		background-color: #fff;
 	}
+	.tab-item-active {
+		position: relative;
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 15%;
+			content: '';
+			display: block;
+			width: 70%;
+			height: 4px;
+			background-color: rgb(245, 70, 70);
+		}
+	}
 }
 
-.goods-list {
+.order-list {
 	padding-top: 20px;
-	.goods-item {
+	.order-item {
 		padding: 20px 30px;
 		background-color: #fff;
-		&-img {
-			width: 140px;
-			height: 140px;
-			background-color: #f5f5f5;
-		}
-		&-info {
-			margin-left: 10px;
-		}
+		margin-bottom: 30px;
 
-		.goods-name {
-			@include multiline-overflow(2);
+		.order-header {
+			color: #333;
 			font-size: 28px;
 		}
 
-		.goods-label {
-			font-size: 26px;
-			color: $grayFont;
-			margin-top: 10px;
+		.order-status {
+			color: #f00;
 		}
 
-		.goods-price {
-			color: red;
+		.order-footer {
+			text-align: right;
+			font-size: 30px;
 			margin-top: 10px;
 		}
 	}

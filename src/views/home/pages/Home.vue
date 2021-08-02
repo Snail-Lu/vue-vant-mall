@@ -20,6 +20,7 @@
 					:key="item"
 					class="goods-item"
 					price="2699.00"
+					origin-price="2999.00"
 					desc="2021年新款5G手机"
 					title="Redmi K40游戏增强版 天玑1200处理器67W闪充 120Hz高刷直屏 12GB+256GB 暗影 游戏电竞智能5G手机 小米 红米"
 					thumb="https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/178206/9/15027/175199/60fa8560Ea00bcfee/f4df2ce7ecd451cf.jpg!q70.dpg.webp"
