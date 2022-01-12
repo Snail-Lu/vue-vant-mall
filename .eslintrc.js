@@ -18,6 +18,7 @@ module.exports = {
 	},
 	plugins: ['vue', 'prettier'],
 	rules: {
-		'prettier/prettier': 'error'
+		'prettier/prettier': 'error',
+		'no-debugger': 'off'
 	}
 }
