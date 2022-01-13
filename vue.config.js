@@ -7,10 +7,8 @@ function resolve(dir) {
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-	publicPath: './', // 默认为'/'
-
-	// 将构建好的文件输出到哪里，本司要求
-	outputDir: 'dist/static',
+	publicPath: isProd ? '/vue-vant-mall/' : '/', // 默认为'/'
+	outputDir: 'build',
 
 	// 放置生成的静态资源(js、css、img、fonts)的目录。
 	assetsDir: 'static',

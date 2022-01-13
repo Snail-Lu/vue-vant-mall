@@ -68,6 +68,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
+	mode: 'hash',
+	bash: '/vue-vant-mall',
 	routes
 })
 

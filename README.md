@@ -1,6 +1,6 @@
 ### 项目简介
 
-> 基于 Vue2.0 + Vant UI 实现的移动端商城项目模板。
+> 基于 Vue2.0 + Vant UI 实现的移动端商城项目。[预览地址](https://snail-lu.github.io/vue-vant-mall/)
 
 ### 项目技术点
 
@@ -29,6 +29,10 @@ npm run serve
 
 # 打包
 npm run build
+
+
+# 部署到github pages
+npm run deploy
 ```
 
 ### `Vant`组件按需引入
