@@ -26,8 +26,8 @@
 					thumb="https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/178206/9/15027/175199/60fa8560Ea00bcfee/f4df2ce7ecd451cf.jpg!q70.dpg.webp"
 				>
 					<template #tags>
-						<van-tag plain type="danger" round>满2000减100</van-tag>
-						<van-tag plain type="danger" round>赠品</van-tag>
+						<van-tag type="danger" style="margin-right: 6px">满2000减100</van-tag>
+						<van-tag type="danger">赠品</van-tag>
 					</template>
 				</van-card>
 			</van-list>
