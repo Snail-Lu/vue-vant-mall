@@ -27,7 +27,8 @@ import {
 	Sku,
 	Toast,
 	ContactCard,
-	Stepper
+	Stepper,
+	Skeleton
 } from 'vant'
 
 let vantUIs = [
@@ -59,7 +60,8 @@ let vantUIs = [
 	Sku,
 	Toast,
 	ContactCard,
-	Stepper
+	Stepper,
+	Skeleton
 ]
 
 export default {
