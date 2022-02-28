@@ -70,7 +70,11 @@ const routes = [
 const router = new VueRouter({
 	mode: 'hash',
 	bash: '/vue-vant-mall',
-	routes
+	routes,
+	scrollBehavior() {
+		// 始终滚动到顶部
+		return { x: 0, y: 0 }
+	}
 })
 
 export default router

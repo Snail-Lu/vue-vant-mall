@@ -23,8 +23,8 @@
 					@click="linkTo('goodsDetail')"
 				>
 					<template #tags>
-						<van-tag type="danger" style="margin-right: 6px">满2000减100</van-tag>
-						<van-tag type="danger">赠品</van-tag>
+						<van-tag color="#ff0000" style="margin-right: 6px">满2000减100</van-tag>
+						<van-tag color="#ff0000">赠品</van-tag>
 					</template>
 				</van-card>
 			</van-list>
