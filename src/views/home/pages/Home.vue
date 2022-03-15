@@ -118,7 +118,7 @@ export default {
 	margin: 0 25px;
 	border-radius: 10px;
 	overflow: hidden;
-	padding-top: 25px;
+	// padding-top: 25px;
 
 	.van-swipe-item {
 		// width: 700px;
